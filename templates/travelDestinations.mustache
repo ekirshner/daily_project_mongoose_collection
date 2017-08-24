@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Travel Destinations</title>
+        <link rel="stylesheet" type="text/css" href="/styles.css">
+        <style>@import url('https://fonts.googleapis.com/css?family=Crafty+Girls');</style>
+    </head>
+
+    <body>
+        <h1>Travel Destinations!</h1>
+
+        <a href="/">View All Destinations</a>
+
+        <section id="inputs">
+            <form method="post" action="/add">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Name..">
+
+                <label for="beaches">Number of Beaches</label>
+                <input type="text" name="beaches" id="beaches" placeholder="Number of Beaches..">
+
+                <label for="languages">Languages:</label>
+                <input type="text" name="languages" id="languages" placeholder="Enter languages separated by a comma">
+
+                <input type="submit" value="Add Destination">
+            </form>
+       </section>
+
+            <form method="post" action="/remove">
+                <label for="removeName">Name</label>
+                <input type="text" name="removeName" id="removeName" placeholder="Name..">
+                <input type="submit" value="Remove Destination">
+            </form>
+         
+        
+        <section>
+            {{ #destination }}
+                <div id="destinations-section">
+                    <h3> Name: <span>{{ name }}</span> </h3>
+                    <h3> Number of Beaches: <span>{{ beaches }}</span> </h3>
+                    
+                    <h3>Languages:</h3>
+                        {{ #languages }}
+                            <ul>
+                                <li> <span>{{ . }}</span> </li>
+                            </ul>
+                        {{ /languages }}
+
+                    <!--<h3>Best For:</h3>
+                        {{ #bestFor}}
+                            <ul>
+                                <li> {{maritalStatus}} </li>
+                                <li> {{children}} </li>
+                                <li> {{budget}} </li>
+                            <ul>
+                        {{ /bestFor }} -->
+                </div>
+            {{ /destination }}
+        </section>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    background-image: url('http://quotesideas.com/wp-content/uploads/2015/02/Memories-quote-with-travel-background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Crafty Girls', cursive;
+}
+
+h1 {
+    color: #1BB3F5;
+    font-size: 50px;
+    text-align: center;
+}
+
+section {
+    display: flex;  
+    flex-wrap: wrap;
+}
+
+div {
+    border: 1px solid navy;
+    background-color: white;
+    padding: 2%;
+    margin: 2%;
+    width: 15%;
+    text-align: left;
+    z-index: 1;
+}
+
+#inputs {
+    float: right;
+}
+
+span {
+    color: #1BB3F5;
+    font-weight: bolder;
+}
+
+a { 
+    color: black;
+    font-size: 20px;
+}
